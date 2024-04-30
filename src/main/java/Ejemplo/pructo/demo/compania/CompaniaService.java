@@ -1,5 +1,5 @@
 package Ejemplo.pructo.demo.compania;
-
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +21,15 @@ public class CompaniaService {
         return companiaRepository.findById(id).orElse(null);
     }
 
-   
+   //metodo delete
+   public void deleteById(Long id)
+   {
+        companiaRepository.deleteById(id);
+   }
+
+   //metodo select all
+   public List<Compania> findAll()
+   {
+    return companiaRepository.findAll();
+   }
     }
