@@ -1,9 +1,10 @@
 package Ejemplo.pructo.demo.categoria;
 
-
+import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
+@Service
 public class CategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository;
