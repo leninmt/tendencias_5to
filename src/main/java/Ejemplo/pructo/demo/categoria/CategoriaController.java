@@ -42,7 +42,7 @@ public class CategoriaController {
 
     //Delete
     @DeleteMapping(value = "categoria/{id}")
-    public void deleteById(Long id)
+    public void deleteById(@PathVariable Long id)
     {
         categoriaService.deleteById(id);
     }
