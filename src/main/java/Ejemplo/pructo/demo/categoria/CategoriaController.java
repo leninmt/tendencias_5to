@@ -1,6 +1,7 @@
 package Ejemplo.pructo.demo.categoria;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -53,8 +54,13 @@ public class CategoriaController {
         return categoriaService.findAll();
     }
 
-    
 
+      //updatebyid
 
+      @PutMapping(value="categoria/{id}")
+      public ResponseEntity<Categoria> updateById(@PathVariable Long id,@RequestBody Categoria entity)
+      {
+          return categoriaService.updateById(id, entity);
+      }
 
 }

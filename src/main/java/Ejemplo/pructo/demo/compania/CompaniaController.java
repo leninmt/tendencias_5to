@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import Ejemplo.pructo.demo.categoria.Categoria;
+
 import java.util.List;
 @RestController
 @RequestMapping("/api/prueba")
@@ -50,4 +53,6 @@ public class CompaniaController {
     {
         return companiaService.findAll();
     }
+
+  
 }
